@@ -8,7 +8,7 @@
              Shell.FlyoutBehavior="Disabled"
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="True"
-             Title="Do Something">
+             Title="Some Other Page">
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
             <Label VerticalOptions="Center" Text="QUIZ: How can I go BACK?" Margin="25,0,0,0" FontSize="Large" TextColor="DarkGreen"/>
