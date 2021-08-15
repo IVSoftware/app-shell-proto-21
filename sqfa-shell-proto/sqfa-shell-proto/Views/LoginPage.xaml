@@ -36,19 +36,11 @@
                 Margin="25,0,0,0" 
                 FontSize="Medium" 
                 TextColor="#444444"/>
-            <!--Label     
-                Grid.Column="1"   
-                Grid.Row="2"
-                VerticalOptions="Center" 
-                Text="iOS: Swipe Right" 
-                Margin="25,0,0,0" 
-                FontSize="Medium" 
-                TextColor="#444444"/-->
             <Label     
                 Grid.Column="1"   
                 Grid.Row="2"
                 VerticalOptions="Center" 
-                Text="iOS: ???" 
+                Text="iOS: Start off-screen Left and swipe Right." 
                 Margin="25,0,0,0" 
                 FontSize="Medium" 
                 TextColor="#444444"/>
