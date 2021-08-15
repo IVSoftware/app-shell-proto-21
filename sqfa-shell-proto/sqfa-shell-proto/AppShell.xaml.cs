@@ -11,8 +11,6 @@ namespace sqfa_shell_proto
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
 
             Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
         }
@@ -20,7 +18,7 @@ namespace sqfa_shell_proto
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
             Shell.Current.FlyoutIsPresented = false;
-            await Shell.Current.GoToAsync("LoginPage");
+            await Shell.Current.GoToAsync("//MainPage/LoginPage");
         }
 
         protected override void OnNavigating(ShellNavigatingEventArgs e)

@@ -13,19 +13,21 @@ namespace sqfa_shell_proto.Views
         }
         protected override void OnAppearing()
         {
-            base.OnAppearing();
-            
+            base.OnAppearing();            
         }
 
         private void OnTapped(object sender, EventArgs e)
         {
-            App.Current.MainPage.DisplayAlert("", "And I said, \"sure\".", "Do Something");
-            Shell.Current.GoToAsync("LoginPage");
+            GoToSomePage();
         }
 
         private void OnSwiped(object sender, SwipedEventArgs e)
         {
-            App.Current.MainPage.DisplayAlert("", "Got you swipers covered, too", "Do Something");
+            GoToSomePage();
+        }
+
+        void GoToSomePage()
+        {
             Shell.Current.GoToAsync("LoginPage");
         }
     }

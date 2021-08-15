@@ -12,8 +12,6 @@ namespace sqfa_shell_proto
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

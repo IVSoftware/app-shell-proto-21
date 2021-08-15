@@ -10,8 +10,48 @@
              Shell.TabBarIsVisible="True"
              Title="Some Other Page">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Label VerticalOptions="Center" Text="QUIZ: How can I go BACK?" Margin="25,0,0,0" FontSize="Large" TextColor="DarkGreen"/>
-        </StackLayout>
+        <Grid Padding="20,0,10,0" VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label 
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                VerticalOptions="Center" 
+                Text="Go Back" 
+                FontSize="Large" 
+                TextColor="DarkGreen"/>
+            <Label        
+                Grid.Column="1"   
+                Grid.Row="1"
+                VerticalOptions="Center" 
+                Text="Android: Use System Back Button" 
+                Margin="25,0,0,0" 
+                FontSize="Medium" 
+                TextColor="#444444"/>
+            <!--Label     
+                Grid.Column="1"   
+                Grid.Row="2"
+                VerticalOptions="Center" 
+                Text="iOS: Swipe Right" 
+                Margin="25,0,0,0" 
+                FontSize="Medium" 
+                TextColor="#444444"/-->
+            <Label     
+                Grid.Column="1"   
+                Grid.Row="2"
+                VerticalOptions="Center" 
+                Text="iOS: ???" 
+                Margin="25,0,0,0" 
+                FontSize="Medium" 
+                TextColor="#444444"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
