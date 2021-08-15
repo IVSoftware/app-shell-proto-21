@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sqfa_shell_proto.Views.AboutPage"
+             xmlns:vm="clr-namespace:sqfa_shell_proto.ViewModels"
+             Title="{Binding Title}"
+             Shell.FlyoutBehavior="Flyout"
+             Shell.NavBarIsVisible="True"
+             Shell.TabBarIsVisible="True"
+             Shell.BackgroundColor="DarkCyan">
+    <Shell.TitleView >
+        <StackLayout Orientation="Horizontal" BackgroundColor="Cyan" Padding="0" Margin="0">
+            <!--Label Text="&lt;" VerticalTextAlignment="Center" TextColor="White" FontSize="30" Padding="5,0,0,0"/-->
+        </StackLayout>
+    </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ContentView>
+            <ContentView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnTapped" />
+                <SwipeGestureRecognizer Swiped="OnSwiped" Direction="Up"/>
+                <SwipeGestureRecognizer Swiped="OnSwiped" Direction="Down"/>
+                <SwipeGestureRecognizer Swiped="OnSwiped" Direction="Left"/>
+                <SwipeGestureRecognizer Swiped="OnSwiped" Direction="Right"/>
+            </ContentView.GestureRecognizers>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Label VerticalOptions="Center" Text="This is the MAIN PAGE" Margin="25,0,0,0" FontSize="Large" TextColor="DarkBlue"/>
+        </StackLayout>
+        </ContentView>
+    </ContentPage.Content>
+</ContentPage>
