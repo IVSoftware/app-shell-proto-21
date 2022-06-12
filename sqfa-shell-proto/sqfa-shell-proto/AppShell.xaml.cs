@@ -23,19 +23,21 @@ namespace sqfa_shell_proto
 
         protected override void OnNavigating(ShellNavigatingEventArgs e)
         {
-            if(
-                // Detect Back Navigation
-                e.Source == ShellNavigationSource.Pop &&
-
-                // Make sure it's safe to examint the current page
-                (Shell.Current != null) && 
-                (Shell.Current.CurrentPage != null) &&
-
-                // Cancel or Not, based on (for example) the Title of the current page.
-                (Shell.Current.Title != "My Main Page"))
+            // Make sure it's safe to examine the current page
+            if ((Shell.Current != null) &&
+                (Shell.Current.CurrentPage != null))
             {
-                e.Cancel();
-                Shell.Current.GoToAsync("..");
+                Console.WriteLine($"{e.Source} {Shell.Current.Title}");
+                if (
+                    // Detect Back Navigation
+                    e.Source == ShellNavigationSource.Pop &&
+
+                    // Cancel or Not, based on (for example) the Title of the current page.
+                    (Shell.Current.Title != "My Main Page"))
+                {
+                    e.Cancel();
+                    Shell.Current.GoToAsync("..");
+                }
             }
             base.OnNavigating(e);
         }
